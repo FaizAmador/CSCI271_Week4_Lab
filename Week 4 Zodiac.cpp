@@ -1,20 +1,38 @@
-// Week 4 Zodiac.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
-
-int main()
-{
-    std::cout << "Hello World!\n";
+#include <string>
+using namespace std;
+int main() {
+	string name, zodiac;
+	int month, day;
+	cout << "Enter your name: ";
+	getline(cin, name);
+	cout << "Enter your birth month: ";
+	cin >> month;
+	cout << "Enter your birth day: ";
+	cin >> day;
+	if ((month == 3 && day >= 21) || (month == 4 && day <= 19))
+		zodiac = "Aries";
+	else if ((month == 4 && day >= 20) || (month == 5 && day <= 20))
+		zodiac = "Taurus";
+	else if ((month == 5 && day >= 21) || (month == 6 && day <= 20))
+		zodiac = "Gemini";
+	else if ((month == 6 && day >= 21) || (month == 7 && day <= 22))
+		zodiac = "Cancer";
+	else if ((month == 7 && day >= 23) || (month == 8 && day <= 22))
+		zodiac = "Leo";
+	else if ((month == 8 && day >= 23) || (month == 9 && day <= 22))
+		zodiac = "Virgo";
+	else if ((month == 9 && day >= 23) || (month == 10 && day <= 22))
+		zodiac = "Libra";
+	else if ((month == 10 && day >= 23) || (month == 11 && day <= 22))
+		zodiac = "Scorpio";
+	else if ((month == 11 && day >= 23) || (month == 12 && day <= 21))
+		zodiac = "Sagittarius";
+	else if ((month == 12 && day >= 22) || (month == 1 && day <= 19))
+		zodiac = "Capricorn";
+	else if ((month == 1 && day >= 20) || (month == 2 && day <= 18))
+		zodiac = "Aquarius";
+	else
+		zodiac = "Pisces";
+	cout << "Hello " << name << "!" << "Your zodiac sign is : " << zodiac;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
